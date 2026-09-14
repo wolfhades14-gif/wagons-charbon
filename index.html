@@ -9,34 +9,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Wagons Charbon">
 <meta name="theme-color" content="#2C4A63">
-<link id="manifestLink" rel="manifest">
-<link id="iconLink" rel="apple-touch-icon">
-<script>
-  // Build a manifest + app icon on the fly (data URIs) so the app installs
-  // cleanly from a single local HTML file, with no separate assets needed.
-  (function(){
-    const iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
-      <rect width="192" height="192" rx="32" fill="#2C4A63"/>
-      <rect x="36" y="70" width="120" height="60" rx="10" fill="#EEF1F3"/>
-      <rect x="36" y="70" width="120" height="16" fill="#B36B00"/>
-      <circle cx="62" cy="140" r="14" fill="#EEF1F3"/>
-      <circle cx="130" cy="140" r="14" fill="#EEF1F3"/>
-    </svg>`;
-    const iconUrl = "data:image/svg+xml;base64," + btoa(iconSvg);
-    document.getElementById("iconLink").href = iconUrl;
-    const manifest = {
-      name: "Suivi Wagons Charbon",
-      short_name: "Wagons Charbon",
-      start_url: ".",
-      display: "standalone",
-      background_color: "#EEF1F3",
-      theme_color: "#2C4A63",
-      icons: [{ src: iconUrl, sizes: "192x192", type: "image/svg+xml" }]
-    };
-    const manifestUrl = "data:application/manifest+json," + encodeURIComponent(JSON.stringify(manifest));
-    document.getElementById("manifestLink").href = manifestUrl;
-  })();
-</script>
+<meta name="description" content="Suivi des wagons charbon ONCF sur les sites de Beni Ansar, Selouane et Hassi Blal.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-512.png">
 <style>
   :root{
     --bg:#EEF1F3;
